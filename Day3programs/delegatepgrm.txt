@@ -1,0 +1,26 @@
+namespace ConsoleApp85
+{
+
+    public delegate int delg(int a, int b);
+
+    class first
+    {
+        public static int add(int a,int b)
+        {
+
+            return a + b;
+        }
+        public static int sub(int a , int b)
+        {
+            return a - b;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            delg obj = new delg(first.add);
+            Console.WriteLine(obj.Invoke(1, 2));
+        }
+    }
+}

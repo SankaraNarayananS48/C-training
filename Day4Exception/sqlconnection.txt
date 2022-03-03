@@ -1,0 +1,19 @@
+SqlConnection conn = new SqlConnection("Data Source=LAPTOP-AFEFCQAI\\SQLEXPRESS;Initial Catalog=extra;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand();
+
+            Console.WriteLine("enter the id");
+            int id = int.Parse(Console.ReadLine());
+
+
+            Console.WriteLine("enter the Name");
+            string Name = Console.ReadLine();
+
+            Console.WriteLine("enter the password");
+            string Password = Console.ReadLine();
+            
+        
+conn.Open();
+            cmd.CommandText = "insert into login values(" + id + ",'" + Name + "','" + Password + "')";
+            cmd.Connection = conn;
+            cmd.ExecuteNonQuery();
+            conn.Close();

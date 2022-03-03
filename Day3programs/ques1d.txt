@@ -1,0 +1,5 @@
+Write a program to find maximum and minimum element in an array.
+Write a program to count a total number of duplicate elements in    an array
+Write a program to merge two arrays of same size sorted in    ascending order. 
+Write a program to separate odd and even integers in separate    arrays
+Write a program to insert New value in the array (sorted list ).

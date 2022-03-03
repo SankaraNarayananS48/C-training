@@ -1,0 +1,15 @@
+D:\Programs\Day4Exception\ExceptionPgrm1\ExceptionPgrm1\obj\Debug\net6.0\ExceptionPgrm1.csproj.AssemblyReference.cache
+D:\Programs\Day4Exception\ExceptionPgrm1\ExceptionPgrm1\obj\Debug\net6.0\ExceptionPgrm1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programs\Day4Exception\ExceptionPgrm1\ExceptionPgrm1\obj\Debug\net6.0\ExceptionPgrm1.AssemblyInfoInputs.cache
+D:\Programs\Day4Exception\ExceptionPgrm1\ExceptionPgrm1\obj\Debug\net6.0\ExceptionPgrm1.AssemblyInfo.cs
+D:\Programs\Day4Exception\ExceptionPgrm1\ExceptionPgrm1\obj\Debug\net6.0\ExceptionPgrm1.csproj.CoreCompileInputs.cache
+D:\Programs\Day4Exception\ExceptionPgrm1\ExceptionPgrm1\bin\Debug\net6.0\ExceptionPgrm1.exe
+D:\Programs\Day4Exception\ExceptionPgrm1\ExceptionPgrm1\bin\Debug\net6.0\ExceptionPgrm1.deps.json
+D:\Programs\Day4Exception\ExceptionPgrm1\ExceptionPgrm1\bin\Debug\net6.0\ExceptionPgrm1.runtimeconfig.json
+D:\Programs\Day4Exception\ExceptionPgrm1\ExceptionPgrm1\bin\Debug\net6.0\ExceptionPgrm1.dll
+D:\Programs\Day4Exception\ExceptionPgrm1\ExceptionPgrm1\bin\Debug\net6.0\ExceptionPgrm1.pdb
+D:\Programs\Day4Exception\ExceptionPgrm1\ExceptionPgrm1\obj\Debug\net6.0\ExceptionPgrm1.dll
+D:\Programs\Day4Exception\ExceptionPgrm1\ExceptionPgrm1\obj\Debug\net6.0\refint\ExceptionPgrm1.dll
+D:\Programs\Day4Exception\ExceptionPgrm1\ExceptionPgrm1\obj\Debug\net6.0\ExceptionPgrm1.pdb
+D:\Programs\Day4Exception\ExceptionPgrm1\ExceptionPgrm1\obj\Debug\net6.0\ExceptionPgrm1.genruntimeconfig.cache
+D:\Programs\Day4Exception\ExceptionPgrm1\ExceptionPgrm1\obj\Debug\net6.0\ref\ExceptionPgrm1.dll

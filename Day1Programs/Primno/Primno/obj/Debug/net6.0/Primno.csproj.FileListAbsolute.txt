@@ -1,0 +1,15 @@
+D:\Programs\Primno\Primno\bin\Debug\net6.0\Primno.exe
+D:\Programs\Primno\Primno\bin\Debug\net6.0\Primno.deps.json
+D:\Programs\Primno\Primno\bin\Debug\net6.0\Primno.runtimeconfig.json
+D:\Programs\Primno\Primno\bin\Debug\net6.0\Primno.dll
+D:\Programs\Primno\Primno\bin\Debug\net6.0\Primno.pdb
+D:\Programs\Primno\Primno\obj\Debug\net6.0\Primno.csproj.AssemblyReference.cache
+D:\Programs\Primno\Primno\obj\Debug\net6.0\Primno.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programs\Primno\Primno\obj\Debug\net6.0\Primno.AssemblyInfoInputs.cache
+D:\Programs\Primno\Primno\obj\Debug\net6.0\Primno.AssemblyInfo.cs
+D:\Programs\Primno\Primno\obj\Debug\net6.0\Primno.csproj.CoreCompileInputs.cache
+D:\Programs\Primno\Primno\obj\Debug\net6.0\Primno.dll
+D:\Programs\Primno\Primno\obj\Debug\net6.0\refint\Primno.dll
+D:\Programs\Primno\Primno\obj\Debug\net6.0\Primno.pdb
+D:\Programs\Primno\Primno\obj\Debug\net6.0\Primno.genruntimeconfig.cache
+D:\Programs\Primno\Primno\obj\Debug\net6.0\ref\Primno.dll

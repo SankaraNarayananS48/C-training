@@ -1,0 +1,9 @@
+conn.Open();
+            cmd.Connection = conn;
+            cmd.CommandText = "insert_login";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", 1212);
+            cmd.Parameters.AddWithValue("@name", "daada");
+            cmd.Parameters.AddWithValue("@password", "assasa");
+            cmd.ExecuteNonQuery();
+            conn.Close();

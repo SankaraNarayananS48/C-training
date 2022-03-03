@@ -1,0 +1,10 @@
+conn.Open();
+            cmd.CommandText = "select * from login";
+            cmd.Connection = conn;
+            da.SelectCommand = cmd;
+            da.Fill(ds,"temp");
+            conn.Close();
+            for (int i=0;i<ds.Tables["temp"].Rows.Count;i++)
+            {
+                System.Console.WriteLine(ds.Tables["temp"].Rows[i]["name"].ToString());
+            }

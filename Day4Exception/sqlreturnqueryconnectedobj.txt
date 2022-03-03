@@ -1,0 +1,13 @@
+conn.Open();
+            cmd.CommandText = "select * from login";
+            cmd.Connection = conn;
+
+            dr = cmd.ExecuteReader();
+            
+            while (dr.Read())
+            {
+
+                System.Console.WriteLine(dr.GetValue(0).ToString());
+
+            }
+            conn.Close();

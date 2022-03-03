@@ -1,0 +1,88 @@
+Sumofdigits
+class firstpgrm {
+
+    public static int sumofdigits(int value)
+    {
+        int sum = 0;
+        for (; value > 0; value /= 10)
+        {
+            sum += value % 10;
+        }
+        return sum;
+    }
+    public static void Main(String[] args) {
+
+        int a,op;
+        a= int.Parse(Console.ReadLine());
+        op = firstpgrm.sumofdigits(a);
+        if(op >= 10)
+        {
+            Console.WriteLine(sumofdigits(op).ToString());
+        }
+        else
+        {
+            Console.WriteLine(op.ToString());
+        }
+    }
+
+    
+}
+
+
+
+Fibonaaci
+class secongpgrm
+{
+    static void Main(String[] args)
+    {
+        int a = 0, b = 1, ip,c;
+        ip = int.Parse(Console.ReadLine());
+        Console.WriteLine(a);
+        Console.WriteLine(b);
+        for (int i = 2; i < ip; i++) {
+             c = a + b;
+            Console.WriteLine(c);
+            a = b;
+            b = c;
+
+        }
+    }
+}
+
+
+
+
+PrimeNo
+class thirdpgrm
+{
+    static void checkPrime(int n)
+    {
+        int flag = 0;
+        for (int i = 2; i < n; i++)
+        {
+            if (n % i == 0)
+            {
+                flag = 1;
+            }
+        }
+        if (flag == 0)
+        {
+            Console.WriteLine(n);
+        }
+        else
+        {
+            flag = 1;
+        }
+    }
+    
+    static void Main(String[] args)
+    {
+        int start,end;
+        start = int.Parse(Console.ReadLine());
+        end = int.Parse(Console.ReadLine());
+        for (int i=start;i<=end;i++)
+        {
+            checkPrime(i);
+        }
+    }
+}

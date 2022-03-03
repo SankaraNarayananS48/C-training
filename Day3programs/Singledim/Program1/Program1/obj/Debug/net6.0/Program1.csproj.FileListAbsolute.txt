@@ -1,0 +1,15 @@
+D:\Programs\Day3programs\Singledim\Program1\Program1\obj\Debug\net6.0\Program1.csproj.AssemblyReference.cache
+D:\Programs\Day3programs\Singledim\Program1\Program1\obj\Debug\net6.0\Program1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programs\Day3programs\Singledim\Program1\Program1\obj\Debug\net6.0\Program1.AssemblyInfoInputs.cache
+D:\Programs\Day3programs\Singledim\Program1\Program1\obj\Debug\net6.0\Program1.AssemblyInfo.cs
+D:\Programs\Day3programs\Singledim\Program1\Program1\obj\Debug\net6.0\Program1.csproj.CoreCompileInputs.cache
+D:\Programs\Day3programs\Singledim\Program1\Program1\bin\Debug\net6.0\Program1.exe
+D:\Programs\Day3programs\Singledim\Program1\Program1\bin\Debug\net6.0\Program1.deps.json
+D:\Programs\Day3programs\Singledim\Program1\Program1\bin\Debug\net6.0\Program1.runtimeconfig.json
+D:\Programs\Day3programs\Singledim\Program1\Program1\bin\Debug\net6.0\Program1.dll
+D:\Programs\Day3programs\Singledim\Program1\Program1\bin\Debug\net6.0\Program1.pdb
+D:\Programs\Day3programs\Singledim\Program1\Program1\obj\Debug\net6.0\Program1.dll
+D:\Programs\Day3programs\Singledim\Program1\Program1\obj\Debug\net6.0\refint\Program1.dll
+D:\Programs\Day3programs\Singledim\Program1\Program1\obj\Debug\net6.0\Program1.pdb
+D:\Programs\Day3programs\Singledim\Program1\Program1\obj\Debug\net6.0\Program1.genruntimeconfig.cache
+D:\Programs\Day3programs\Singledim\Program1\Program1\obj\Debug\net6.0\ref\Program1.dll

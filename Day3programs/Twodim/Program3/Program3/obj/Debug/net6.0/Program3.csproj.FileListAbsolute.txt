@@ -1,0 +1,15 @@
+D:\Programs\Day3programs\Twodim\Program3\Program3\bin\Debug\net6.0\Program3.exe
+D:\Programs\Day3programs\Twodim\Program3\Program3\bin\Debug\net6.0\Program3.deps.json
+D:\Programs\Day3programs\Twodim\Program3\Program3\bin\Debug\net6.0\Program3.runtimeconfig.json
+D:\Programs\Day3programs\Twodim\Program3\Program3\bin\Debug\net6.0\Program3.dll
+D:\Programs\Day3programs\Twodim\Program3\Program3\bin\Debug\net6.0\Program3.pdb
+D:\Programs\Day3programs\Twodim\Program3\Program3\obj\Debug\net6.0\Program3.csproj.AssemblyReference.cache
+D:\Programs\Day3programs\Twodim\Program3\Program3\obj\Debug\net6.0\Program3.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programs\Day3programs\Twodim\Program3\Program3\obj\Debug\net6.0\Program3.AssemblyInfoInputs.cache
+D:\Programs\Day3programs\Twodim\Program3\Program3\obj\Debug\net6.0\Program3.AssemblyInfo.cs
+D:\Programs\Day3programs\Twodim\Program3\Program3\obj\Debug\net6.0\Program3.csproj.CoreCompileInputs.cache
+D:\Programs\Day3programs\Twodim\Program3\Program3\obj\Debug\net6.0\Program3.dll
+D:\Programs\Day3programs\Twodim\Program3\Program3\obj\Debug\net6.0\refint\Program3.dll
+D:\Programs\Day3programs\Twodim\Program3\Program3\obj\Debug\net6.0\Program3.pdb
+D:\Programs\Day3programs\Twodim\Program3\Program3\obj\Debug\net6.0\Program3.genruntimeconfig.cache
+D:\Programs\Day3programs\Twodim\Program3\Program3\obj\Debug\net6.0\ref\Program3.dll

@@ -1,0 +1,15 @@
+D:\Programs\Day3programs\Singledim\Program2\Program2\obj\Debug\net6.0\Program2.csproj.AssemblyReference.cache
+D:\Programs\Day3programs\Singledim\Program2\Program2\obj\Debug\net6.0\Program2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programs\Day3programs\Singledim\Program2\Program2\obj\Debug\net6.0\Program2.AssemblyInfoInputs.cache
+D:\Programs\Day3programs\Singledim\Program2\Program2\obj\Debug\net6.0\Program2.AssemblyInfo.cs
+D:\Programs\Day3programs\Singledim\Program2\Program2\obj\Debug\net6.0\Program2.csproj.CoreCompileInputs.cache
+D:\Programs\Day3programs\Singledim\Program2\Program2\bin\Debug\net6.0\Program2.exe
+D:\Programs\Day3programs\Singledim\Program2\Program2\bin\Debug\net6.0\Program2.deps.json
+D:\Programs\Day3programs\Singledim\Program2\Program2\bin\Debug\net6.0\Program2.runtimeconfig.json
+D:\Programs\Day3programs\Singledim\Program2\Program2\bin\Debug\net6.0\Program2.dll
+D:\Programs\Day3programs\Singledim\Program2\Program2\bin\Debug\net6.0\Program2.pdb
+D:\Programs\Day3programs\Singledim\Program2\Program2\obj\Debug\net6.0\Program2.dll
+D:\Programs\Day3programs\Singledim\Program2\Program2\obj\Debug\net6.0\refint\Program2.dll
+D:\Programs\Day3programs\Singledim\Program2\Program2\obj\Debug\net6.0\Program2.pdb
+D:\Programs\Day3programs\Singledim\Program2\Program2\obj\Debug\net6.0\Program2.genruntimeconfig.cache
+D:\Programs\Day3programs\Singledim\Program2\Program2\obj\Debug\net6.0\ref\Program2.dll

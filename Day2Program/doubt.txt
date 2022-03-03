@@ -1,0 +1,2 @@
+how to access base class private member?
+how to access the derived class methods with base class object

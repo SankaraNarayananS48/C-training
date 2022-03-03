@@ -1,0 +1,7 @@
+An array whose elements are arrays is known as Jagged arrays it means “array of arrays“. The jagged array elements may be of different dimensions and sizes. Below are the examples to show how to declare, initialize, and access the jagged arrays.
+
+int[][] jaggedArray = new int[3][];
+
+jaggedArray[0] = new int[] { 1, 3, 5, 7, 9 }; // 5 size
+jaggedArray[1] = new int[] { 0, 2, 4, 6 };
+jaggedArray[2] = new int[] { 11, 22 };
