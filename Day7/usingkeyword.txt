@@ -1,0 +1,26 @@
+ using(SqlConnection conn = new SqlConnection("Data Source=LAPTOP-AFEFCQAI\\SQLEXPRESS;Initial Catalog=extra;Integrated Security=True"))
+            { 
+                using(SqlCommand cmd = new SqlCommand())
+                {
+                    try
+                    {
+                        conn.Open();
+                        cmd.Connection = conn;
+                        cmd.CommandText = "insert_login";
+                        cmd.CommandType = CommandType.StoredProcedure;
+              
+   cmd.Parameters.AddWithValue("@id", 1212);
+                        cmd.Parameters.AddWithValue("@name", "daada");
+                        cmd.Parameters.AddWithValue("@password", "assasa");
+                        cmd.ExecuteNonQuery();
+                        
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                    
