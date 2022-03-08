@@ -150,3 +150,25 @@ create proc finalreport
 as
 select c.catname,sc.subcatname from product p join category c on p.catid = c.catid join subcategory sc on p.subcatid = sc.subcatid and p.catid = sc.catid where p.catid =@catid and p.subcatid = @subcatid
 
+create table userlogintable(id varchar(10),password varchar(10))
+
+create proc select_pass
+@id varchar(10)
+as
+select password from userlogintable where id = @id
+
+insert into userlogintable values('1','abcd')
+
+insert into userlogintable values('2','efgh')
+
+insert into userlogintable values('3','ijk')
+
+insert into userlogintable values('4','lmn')
+
+select * from userlogintable
+
+create proc final
+as
+select * from product order by catid,subcatid,prodid
+
+insert into userlogintable values('sankar','abc')
