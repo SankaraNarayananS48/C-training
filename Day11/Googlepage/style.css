@@ -1,0 +1,74 @@
+body{
+	font-family:Arial;
+	font-size:14px;
+}
+
+li{
+	width:40px;
+	height:20px;
+	float:right;
+	padding:5px;
+	list-style-type:none;
+}
+
+li:hover{
+	cursor:pointer;
+}
+
+li:nth-child(1){
+	width:80px;
+}
+
+li:nth-child(2){
+	background:url(apps.jpg) no-repeat;
+	background-size:30px;
+	margin-left:15px;
+}
+
+button{
+	background-color:#F8F9FA;
+	color:black;
+}
+
+.button1{
+	background-color:blue;
+	color:white;
+}
+
+#centercontent img{
+	margin-top:200px;
+	margin-left:250px;
+}
+
+#footer{
+	width:100%;
+	height:50px;
+	position:absolute;
+	bottom:0;
+	background-color:#dadce0;
+	
+}
+
+.downleft{
+	float:left;
+	margin-left:0px;
+	padding:10px;
+	text-decoration:none;
+	color:grey;
+}
+
+.downright{
+	float:right;
+	margin-right:20px;
+	padding:10px;
+	text-decoration:none;
+	color:grey;
+}
+#footer1{
+	width:100%;
+	height:50px;
+	position:absolute;
+	bottom:35px;
+	background-color:#dadce0;
+	
+}

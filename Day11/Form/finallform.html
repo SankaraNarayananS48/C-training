@@ -1,0 +1,73 @@
+<!DOCTYPE>
+<html>
+  <style>
+    h1,h4{
+           font-family:fantasy;
+		   color:#814B14;
+           text-align:center;
+        }
+	.button{
+	    background-color:#814B14;
+		color:white;
+		border: none;
+		text-align:center;
+		padding: 15px 20px;
+		border-radius: 12px;
+	}
+   </style>
+  <body bgcolor="F0BCD4">
+      <h1>IceCream Parlour</h1>
+	  <div style="text-align:center">
+	     <video width="320" height="240" autoplay muted>
+           <source src="source2.webm" type="video/webm">
+         Your browser does not support the video tag.
+         </video>
+	  </div>
+	  <!--<img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width=250/>-->
+      <form action="www.icecream.com" method = "post">
+            <fieldset>
+                   <legend><h4>Personal Information</h4></legend>
+                   Customer Name<input type = "text" size = "20" pattern="[A-Za-z]{5}"  autocomplete="on" autofocus required/><br><br>
+                   Age<input type="number" value="18" step="1" min="18" max="30" required/><br><br>
+                   Gender<input type="radio" name="gender" value="Male" size="10" required/>Male
+				   <input type="radio" name="gender" value="Female" size="10" required/>Female<br><br>
+                   Phone Number<input type="tel" pattern="[0-9]{10}" required/><br><br>
+                   Email id<input type="email" placeholder="example@gmail.com" required/><br><br>
+            </fieldset><br><br>
+            <fieldset>
+                    <legend><h4>Order details</h4></legend>
+                        Icecream Type<input type="text" list="type" required/><br><br>
+                         <datalist id = "type">
+                          <option value="Falooda"/>
+                          <option value="Cone"/>
+                          <option value="Icecream cake"/>
+                          <option value="Scoop"/>
+                         </datalist>
+                        Flavour<input type="text" list="flavour" required/><br><br>
+                           <datalist id="flavour">
+                                   <option value="Chocolate"/>
+                                   <option value="vanilla"/>
+                                   <option value="plain"/>
+                                   <option value="dark"/>
+                                   <option value="strawberry"/>
+                            </datalist>
+                        Quantity<input type="number" value="1" step="1" size="3" min="1" max=10 required/><br><br>
+			Family pack<input type="checkbox" name="size" value="family" />&nbsp;&nbsp;Medium<input type="checkbox" name="size" value="medium"/><br><br>
+			Sweetness<input type="range" min="2" max="10" value=5"/><br><br>
+			Icecream-Color<input type="color" id="favcolor" name="favcolor" value="#814B14"/><br><br>
+			Date<input type="datetime-local"/><br><br>
+			Upload File<input type="file"/>
+            </fieldset><br><br>
+			<div style="text-align:center">
+			    <button class="button" type="submit">submit</button>
+				<button class="button" type="reset">reset</button>
+			</div>
+        </form>
+		<div style="text-align:center">
+		   <img src="ice.png" usemap="#workmap"/>
+           <map name="workmap">
+                <area shape="square" coords="94,14,190,142" href="http://www.treaticecream.in/">
+		   </map>
+		</div>
+    </body>
+</html>
