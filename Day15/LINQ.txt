@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp101
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            extraDataContext db = new extraDataContext();
+
+
+            // insert 
+
+            //login tb = new login();
+
+            //tb.id = 4;
+            //tb.name = "fff";
+            //tb.password = "ff";
+
+            //db.logins.InsertOnSubmit(tb);
+            //db.SubmitCh
+// update 
+            //login tb = db.logins.SingleOrDefault(u => u.id == 4);
+
+            //tb.name = "ram";
+            //db.SubmitChanges();
+
+            //delete
+
+            //login tb = db.logins.SingleOrDefault(u => u.id == 4);
+            //db.logins.DeleteOnSubmit(tb);
+            //db.SubmitChanges();
+var result = db.logins.ToList();
+
+            foreach(var r in result)
+            {
+                Console.WriteLine(r.name);
+            }
