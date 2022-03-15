@@ -1,0 +1,8 @@
+D:\Programs\DevelopmentCode\Csharp-training\Day15\LinqDemo\LinqDemo\bin\Debug\LinqDemo.exe.config
+D:\Programs\DevelopmentCode\Csharp-training\Day15\LinqDemo\LinqDemo\bin\Debug\LinqDemo.exe
+D:\Programs\DevelopmentCode\Csharp-training\Day15\LinqDemo\LinqDemo\bin\Debug\LinqDemo.pdb
+D:\Programs\DevelopmentCode\Csharp-training\Day15\LinqDemo\LinqDemo\obj\Debug\LinqDemo.csproj.AssemblyReference.cache
+D:\Programs\DevelopmentCode\Csharp-training\Day15\LinqDemo\LinqDemo\obj\Debug\LinqDemo.csproj.SuggestedBindingRedirects.cache
+D:\Programs\DevelopmentCode\Csharp-training\Day15\LinqDemo\LinqDemo\obj\Debug\LinqDemo.csproj.CoreCompileInputs.cache
+D:\Programs\DevelopmentCode\Csharp-training\Day15\LinqDemo\LinqDemo\obj\Debug\LinqDemo.exe
+D:\Programs\DevelopmentCode\Csharp-training\Day15\LinqDemo\LinqDemo\obj\Debug\LinqDemo.pdb
