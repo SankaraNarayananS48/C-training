@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="studentModelStoreContainer" CdmEntityContainer="studentEntities1">
+    <EntitySetMapping Name="studentregs">
+      <EntityTypeMapping TypeName="studentModel.studentreg">
+        <MappingFragment StoreEntitySet="studentreg">
+          <ScalarProperty Name="rollno" ColumnName="rollno" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="delete_studreg" FunctionName="studentModel.Store.delete_studreg" />
+    <FunctionImportMapping FunctionImportName="select_studreg" FunctionName="studentModel.Store.select_studreg">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="studentModel.select_studreg_Result">
+          <ScalarProperty Name="rollno" ColumnName="rollno" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="update_studreg" FunctionName="studentModel.Store.update_studreg" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="studentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'student.dbo.marktable' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="marktable">
+          <Property Name="rollno" Type="varchar" MaxLength="10" />
+          <Property Name="mark1" Type="int" />
+          <Property Name="mark2" Type="int" />
+          <Property Name="mark3" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'student.dbo.studentlogin' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="studentlogin">
+          <Property Name="id" Type="varchar" MaxLength="10" />
+          <Property Name="password" Type="varchar" MaxLength="10" />
+        </EntityType>-->
+        <EntityType Name="studentreg">
+          <Key>
+            <PropertyRef Name="rollno" />
+          </Key>
+          <Property Name="rollno" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="10" />
+          <Property Name="phoneno" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'student.dbo.studreg' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="studreg">
+          <Property Name="rollno" Type="varchar" MaxLength="10" />
+          <Property Name="name" Type="varchar" MaxLength="10" />
+          <Property Name="phoneno" Type="varchar" MaxLength="10" />
+        </EntityType>-->
+        <Function Name="delete_studreg" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="rollno" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="select_studreg" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="update_studreg" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="rollno" Type="varchar" Mode="In" />
+          <Parameter Name="name" Type="varchar" Mode="In" />
+          <Parameter Name="phoneno" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="studentModelStoreContainer">
+          <EntitySet Name="studentreg" EntityType="Self.studentreg" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="studentModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="studentreg">
+          <Key>
+            <PropertyRef Name="rollno" />
+          </Key>
+          <Property Name="rollno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="phoneno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="studentEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="studentregs" EntityType="Self.studentreg" />
+          <FunctionImport Name="delete_studreg">
+            <Parameter Name="rollno" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="select_studreg" ReturnType="Collection(studentModel.select_studreg_Result)" />
+          <FunctionImport Name="update_studreg">
+            <Parameter Name="rollno" Mode="In" Type="String" />
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="phoneno" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="select_studreg_Result">
+          <Property Type="String" Name="rollno" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="name" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="phoneno" Nullable="true" MaxLength="10" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="studentModelStoreContainer" CdmEntityContainer="studentEntities1">
+          <EntitySetMapping Name="studentregs">
+            <EntityTypeMapping TypeName="studentModel.studentreg">
+              <MappingFragment StoreEntitySet="studentreg">
+                <ScalarProperty Name="rollno" ColumnName="rollno" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="delete_studreg" FunctionName="studentModel.Store.delete_studreg" />
+          <FunctionImportMapping FunctionImportName="select_studreg" FunctionName="studentModel.Store.select_studreg">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="studentModel.select_studreg_Result">
+                <ScalarProperty Name="rollno" ColumnName="rollno" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="update_studreg" FunctionName="studentModel.Store.update_studreg" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

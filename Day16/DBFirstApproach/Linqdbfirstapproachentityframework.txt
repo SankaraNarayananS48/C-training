@@ -1,0 +1,19 @@
+extraEntities db = new extraEntities();
+
+            //login tb = new login();
+
+            //tb.id = 55;
+            //tb.name = "name";
+            //tb.password = "password";
+
+            //db.logins.Add(tb);
+            //db.SaveChanges();
+
+            login tb = db.logins.FirstOrDefault(u => u.id == 55);
+
+            //tb.name = "uodatedName";
+
+            //db.SaveChanges();
+
+            db.logins.Remove(tb);
+            db.SaveChanges();
