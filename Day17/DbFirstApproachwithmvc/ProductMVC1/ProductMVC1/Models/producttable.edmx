@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="productdatabaseModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'productdatabase.dbo.category' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="category">
+          <Property Name="catid" Type="int" />
+          <Property Name="catname" Type="varchar" MaxLength="10" />
+        </EntityType>-->
+        <EntityType Name="categorymvc">
+          <Key>
+            <PropertyRef Name="catid" />
+          </Key>
+          <Property Name="catid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="catname" Type="varchar" MaxLength="10" />
+          <Property Name="catdesc" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'productdatabase.dbo.product' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="product">
+          <Property Name="catid" Type="int" />
+          <Property Name="subcatid" Type="int" />
+          <Property Name="prodid" Type="int" />
+          <Property Name="prodname" Type="varchar" MaxLength="10" />
+        </EntityType>-->
+        <EntityType Name="productmvc">
+          <Key>
+            <PropertyRef Name="prodid" />
+          </Key>
+          <Property Name="catid" Type="int" Nullable="false" />
+          <Property Name="prodid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="prodname" Type="varchar" MaxLength="10" />
+          <Property Name="proddesc" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'productdatabase.dbo.subcategory' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="subcategory">
+          <Property Name="catid" Type="int" />
+          <Property Name="subcatid" Type="int" />
+          <Property Name="subcatname" Type="varchar" MaxLength="10" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'productdatabase.dbo.userlogintable' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="userlogintable">
+          <Property Name="id" Type="varchar" MaxLength="10" />
+          <Property Name="password" Type="varchar" MaxLength="10" />
+        </EntityType>-->
+        <Association Name="FK_categorymvc_productmvc">
+          <End Role="categorymvc" Type="Self.categorymvc" Multiplicity="1" />
+          <End Role="productmvc" Type="Self.productmvc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categorymvc">
+              <PropertyRef Name="catid" />
+            </Principal>
+            <Dependent Role="productmvc">
+              <PropertyRef Name="catid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="productdatabaseModel1StoreContainer">
+          <EntitySet Name="categorymvc" EntityType="Self.categorymvc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="productmvc" EntityType="Self.productmvc" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_categorymvc_productmvc" Association="Self.FK_categorymvc_productmvc">
+            <End Role="categorymvc" EntitySet="categorymvc" />
+            <End Role="productmvc" EntitySet="productmvc" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="productdatabaseModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="categorymvc">
+          <Key>
+            <PropertyRef Name="catid" />
+          </Key>
+          <Property Name="catid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="catname" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="catdesc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="productmvcs" Relationship="Self.FK_categorymvc_productmvc" FromRole="categorymvc" ToRole="productmvc" />
+        </EntityType>
+        <EntityType Name="productmvc">
+          <Key>
+            <PropertyRef Name="prodid" />
+          </Key>
+          <Property Name="catid" Type="Int32" Nullable="false" />
+          <Property Name="prodid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="prodname" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="proddesc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="categorymvc" Relationship="Self.FK_categorymvc_productmvc" FromRole="productmvc" ToRole="categorymvc" />
+        </EntityType>
+        <Association Name="FK_categorymvc_productmvc">
+          <End Role="categorymvc" Type="Self.categorymvc" Multiplicity="1" />
+          <End Role="productmvc" Type="Self.productmvc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categorymvc">
+              <PropertyRef Name="catid" />
+            </Principal>
+            <Dependent Role="productmvc">
+              <PropertyRef Name="catid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="productdatabaseEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="categorymvcs" EntityType="Self.categorymvc" />
+          <EntitySet Name="productmvcs" EntityType="Self.productmvc" />
+          <AssociationSet Name="FK_categorymvc_productmvc" Association="Self.FK_categorymvc_productmvc">
+            <End Role="categorymvc" EntitySet="categorymvcs" />
+            <End Role="productmvc" EntitySet="productmvcs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="productdatabaseModel1StoreContainer" CdmEntityContainer="productdatabaseEntities2">
+          <EntitySetMapping Name="categorymvcs">
+            <EntityTypeMapping TypeName="productdatabaseModel1.categorymvc">
+              <MappingFragment StoreEntitySet="categorymvc">
+                <ScalarProperty Name="catid" ColumnName="catid" />
+                <ScalarProperty Name="catname" ColumnName="catname" />
+                <ScalarProperty Name="catdesc" ColumnName="catdesc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="productmvcs">
+            <EntityTypeMapping TypeName="productdatabaseModel1.productmvc">
+              <MappingFragment StoreEntitySet="productmvc">
+                <ScalarProperty Name="catid" ColumnName="catid" />
+                <ScalarProperty Name="prodid" ColumnName="prodid" />
+                <ScalarProperty Name="prodname" ColumnName="prodname" />
+                <ScalarProperty Name="proddesc" ColumnName="proddesc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="productdatabaseModel1StoreContainer" CdmEntityContainer="productdatabaseEntities2">
+    <EntitySetMapping Name="categorymvcs">
+      <EntityTypeMapping TypeName="productdatabaseModel1.categorymvc">
+        <MappingFragment StoreEntitySet="categorymvc">
+          <ScalarProperty Name="catid" ColumnName="catid" />
+          <ScalarProperty Name="catname" ColumnName="catname" />
+          <ScalarProperty Name="catdesc" ColumnName="catdesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="productmvcs">
+      <EntityTypeMapping TypeName="productdatabaseModel1.productmvc">
+        <MappingFragment StoreEntitySet="productmvc">
+          <ScalarProperty Name="catid" ColumnName="catid" />
+          <ScalarProperty Name="prodid" ColumnName="prodid" />
+          <ScalarProperty Name="prodname" ColumnName="prodname" />
+          <ScalarProperty Name="proddesc" ColumnName="proddesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
