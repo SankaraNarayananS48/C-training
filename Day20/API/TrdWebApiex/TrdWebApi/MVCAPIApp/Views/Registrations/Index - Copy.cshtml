@@ -1,0 +1,65 @@
+﻿@model IEnumerable<MVCAPIApp.Models.Registration>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Role)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Role)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+
+            <a onclick="DeleteFun(@item.id);">Delete Client</a>
+        </td>
+    </tr>
+}
+
+</table>
+@section scripts{
+    <script>
+        $(function () {
+            var msg = '@TempData["Message"]';
+            if (msg != '') {
+                alertify.success(msg);
+            }
+
+        })
+
+        function DeleteFun(id) {
+            alertify.confirm("Delete ", "Are u sure ?", function () {
+                window.location.href = '@Url.Action("Delete","Registrations")/' + id;
+            }, null);
+        }
+    </script>
+
+    }

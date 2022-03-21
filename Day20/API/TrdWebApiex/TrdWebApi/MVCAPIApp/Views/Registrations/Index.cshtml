@@ -1,0 +1,91 @@
+﻿@model IEnumerable<MVCAPIApp.Models.Registration>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index </h2>
+
+<form action="/Registrations/DeleteMulSelect" method="post">
+
+   <input type="submit" value="Delete" />
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    
+    <table class="table">
+        <tr>
+            <th>
+                <input type="checkbox" id="SelChe" name="SelChe"  />
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Role)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <input class="chbox"  type="checkbox" id="chbox" name="chbox" value="@item.id"/>
+                 </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Role)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+
+                    <a onclick="DeleteFun(@item.id);">Delete Client</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</form>
+@section scripts{
+    <script>
+        $(function () {
+            var msg = '@TempData["Message"]';
+            if (msg != '') {
+                alertify.success(msg);
+            }
+           
+        })
+
+        $("#SelChe").click(function () {
+            if ($("#SelChe").is(":Checked")) {
+                $(".chbox").prop("checked", true);
+            }
+            else {
+                $(".chbox").prop("checked", false);
+            }
+                
+            
+        });
+        
+
+        function DeleteFun(id) {
+            alertify.confirm("Delete ", "Are u sure ?", function () {
+                window.location.href = '@Url.Action("Delete","Registrations")/' + id;
+            }, null);
+        }
+
+      
+    </script>
+
+    }

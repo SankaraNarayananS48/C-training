@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="trdfinModelStoreContainer" CdmEntityContainer="trdfinEntities">
+    <EntitySetMapping Name="Registrations">
+      <EntityTypeMapping TypeName="trdfinModel.Registration">
+        <MappingFragment StoreEntitySet="Registration">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

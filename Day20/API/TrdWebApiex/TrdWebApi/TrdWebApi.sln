@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrdWebApi", "TrdWebApi\TrdWebApi.csproj", "{F41A88B5-EE52-4292-9C39-0D78614A97FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCAPIApp", "MVCAPIApp\MVCAPIApp.csproj", "{734FFEC4-9205-47DD-8516-5B90EBEE99FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F41A88B5-EE52-4292-9C39-0D78614A97FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F41A88B5-EE52-4292-9C39-0D78614A97FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F41A88B5-EE52-4292-9C39-0D78614A97FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F41A88B5-EE52-4292-9C39-0D78614A97FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{734FFEC4-9205-47DD-8516-5B90EBEE99FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{734FFEC4-9205-47DD-8516-5B90EBEE99FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{734FFEC4-9205-47DD-8516-5B90EBEE99FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{734FFEC4-9205-47DD-8516-5B90EBEE99FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7643CCC-4911-4BE5-96F2-E11E8D514DDD}
+	EndGlobalSection
+EndGlobal

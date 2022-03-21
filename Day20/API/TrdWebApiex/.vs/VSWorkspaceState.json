@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\TrdWebApi",
+    "\\TrdWebApi\\MVCAPIApp",
+    "\\TrdWebApi\\MVCAPIApp\\Controllers",
+    "\\TrdWebApi\\MVCAPIApp\\Models",
+    "\\TrdWebApi\\TrdWebApi"
+  ],
+  "SelectedNode": "\\TrdWebApi\\MVCAPIApp\\MVCAPIApp.csproj",
+  "PreviewInSolutionExplorer": false
+}
